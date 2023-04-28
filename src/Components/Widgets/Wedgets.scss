@@ -1,0 +1,61 @@
+.wedgets {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 10px;
+  height: 100px;
+  cursor: pointer;
+
+&:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all .5s ease-in;
+}
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .percentage{
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        &.positive{
+            color: green;
+        }
+        &.negative{
+            color: rgb(243, 37, 37);
+        }
+    }
+    .icon{
+        font-size: 18px;
+        padding: 5px;
+        border-radius: 15px;
+        // background-color: #757171;
+        align-self: flex-end;
+    }
+  }
+  .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .title{
+        font-size: 14px;
+        font-weight: bold;
+        color: grey;
+    }
+    .counter{
+        font-size: 28px;
+        font-weight: 300;
+    }
+    .link{
+        width: max-content;
+        font-size: 12px;
+        // border-bottom: 1px solid gray;
+        color: brown;
+    }
+  }
+}

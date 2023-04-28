@@ -1,0 +1,27 @@
+.home{
+   display: flex;
+   
+   .homeContainer{
+    flex:7;
+
+    .widgets, .charts{
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+
+    }
+    .charts{
+      padding: 5px 20px;
+    }
+
+    .listContainer{
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 20px;
+
+    .listTitle{
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    }
+   }
+}
