@@ -1,0 +1,73 @@
+.newUserProduct {
+  display: flex;
+  width: 100%;
+  .newuserProductContainer {
+    flex: 7;
+
+    .top,
+    .bottom {
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      padding: 10px;
+      margin: 20px;
+      display: flex;
+
+      .title {
+        color: lightgray;
+        font-size: 16px;
+      }
+
+      .left {
+        flex: 1;
+        text-align: center;
+        .image {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .right {
+        flex: 2;
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: space-around;
+
+          .formInput {
+            width: 40%;
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              .icon {
+                cursor: pointer;
+                padding: 7px;
+                background-color: #b4aeaeb2;
+                border-radius: 50%;
+              }
+            }
+            input {
+              width: 100%;
+              padding: 5px;
+              border: none;
+              border-bottom: 1px solid lightgray;
+            }
+          }
+          .sendBtn {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            background: teal;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

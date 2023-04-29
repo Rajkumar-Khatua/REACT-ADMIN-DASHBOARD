@@ -20,14 +20,12 @@ const Home = () => {
 
         <div className='charts'>
           <Featured />
-          <Chart />
+          <Chart title={"LAST 6 MONTHS (COLLECTIONS)"} aspect={3/1}/>
         </div>
 
-        <div className="listContainer">
-          <div className="listTitle">
-            Latest Transactions
-          </div>
-            <Table/>
+        <div className='listContainer'>
+          <div className='listTitle'>Latest Transactions</div>
+          <Table />
         </div>
       </div>
     </div>

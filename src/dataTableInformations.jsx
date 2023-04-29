@@ -4,6 +4,7 @@ export const userColumns = [
       field: "user",
       headerName: "User",
       width: 230,
+
       renderCell: (params) => {
         return (
           <div className="cellWithImg">
@@ -12,18 +13,23 @@ export const userColumns = [
           </div>
         );
       },
+
+      
     },
+
     {
       field: "email",
       headerName: "Email",
       width: 230,
     },
+
   
     {
       field: "age",
       headerName: "Age",
       width: 100,
     },
+
     {
       field: "status",
       headerName: "Status",
@@ -36,6 +42,7 @@ export const userColumns = [
         );
       },
     },
+
   ];
   
   //temporary data
@@ -53,7 +60,7 @@ export const userColumns = [
       username: "Jamie Lannister",
       img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "2snow@gmail.com",
-      status: "passive",
+      status: "cancelled",
       age: 42,
     },
     {
@@ -77,7 +84,7 @@ export const userColumns = [
       username: "Targaryen",
       img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "5snow@gmail.com",
-      status: "passive",
+      status: "cancelled",
       age: 22,
     },
     {
@@ -93,7 +100,7 @@ export const userColumns = [
       username: "Clifford",
       img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "7snow@gmail.com",
-      status: "passive",
+      status: "cancelled",
       age: 44,
     },
     {

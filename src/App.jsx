@@ -11,6 +11,7 @@ import Login from './Pages/Login/Login';
 import List from './Pages/List/List';
 import Single from './Pages/Single/Single';
 import NewUserProduct from './Pages/New/NewUserProduct';
+import { userInputs } from './formDummtData';
 
 function App() {
   const router = createBrowserRouter([
@@ -31,15 +32,15 @@ function App() {
       element: <Single/>,
     },
     {
-      path: "new",
-      element: <NewUserProduct/>,
+      path: "/new",
+      element: <NewUserProduct inputs={userInputs}/>,
     },
     {
-      path: "products",
+      path: "/products",
       element: <List/>,
     },
     {
-      path: "products/:productId",
+      path: "/products/:productId",
       element: <List/>,
     },
     

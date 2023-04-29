@@ -59,6 +59,16 @@ const List = () => {
       method: "Online",
       status: "Pending",
     },
+    {
+      id: 2342377,
+      product: "ASUS ROG Strix",
+      img: "https://m.media-amazon.com/images/I/61-dgckBg+L._SL1500_.jpg",
+      customer: "Rajkumar",
+      date: "1 March",
+      amount: 2000,
+      method: "Online",
+      status: "Cancelled",
+    },
   ];
   return (
     <TableContainer
@@ -83,16 +93,21 @@ const List = () => {
             <TableRow key={row.id}>
               <TableCell className='tableCell'>{row.id} </TableCell>
               <TableCell className='tableCell'>
-                <div className="cellWrapper">
-                    <img src={row.img} alt="" className="image"/>
-                    {row.product}
+                <div className='cellWrapper'>
+                  <img
+                    src={row.img}
+                    alt=''
+                    className='image'
+                  />
+                  {row.product}
                 </div>
-                </TableCell>
+              </TableCell>
               <TableCell className='tableCell'>{row.customer}</TableCell>
               <TableCell className='tableCell'>{row.date}</TableCell>
               <TableCell className='tableCell'>{row.amount}</TableCell>
               <TableCell className='tableCell'>{row.method}</TableCell>
-              <TableCell className='tableCell'><span className={`status ${row.status}`}> {row.status}</span>
+              <TableCell className='tableCell'>
+                <span className={`status ${row.status}`}> {row.status}</span>
               </TableCell>
             </TableRow>
           ))}
