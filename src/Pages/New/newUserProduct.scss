@@ -1,6 +1,7 @@
 .newUserProduct {
   display: flex;
   width: 100%;
+
   .newuserProductContainer {
     flex: 7;
 
@@ -20,9 +21,9 @@
         flex: 1;
         text-align: center;
         .image {
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
+          width: 80%;
+          height: 80%;
+          border-radius: 5%;
           object-fit: cover;
         }
       }
@@ -30,10 +31,12 @@
         flex: 2;
 
         form {
+          
           display: flex;
           flex-wrap: wrap;
           gap: 30px;
           justify-content: space-around;
+          
 
           .formInput {
             width: 40%;
@@ -41,7 +44,7 @@
               display: flex;
               align-items: center;
               gap: 10px;
-
+              
               .icon {
                 cursor: pointer;
                 padding: 7px;
@@ -54,13 +57,19 @@
               padding: 5px;
               border: none;
               border-bottom: 1px solid lightgray;
+              outline: none;
+
+              &:focus {
+                border-bottom: 2px solid rgba(112, 110, 235, 0.712);
+              }
             }
           }
           .sendBtn {
-            width: 200px;
+            width: 30%;
             padding: 10px;
             border: none;
             background: teal;
+            border-radius: 30px;
             color: #fff;
             cursor: pointer;
             font-weight: bold;
