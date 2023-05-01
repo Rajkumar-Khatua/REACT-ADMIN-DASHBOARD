@@ -9,82 +9,112 @@ import NotificationsActiveRoundedIcon from "@mui/icons-material/NotificationsAct
 import SystemSecurityUpdateGoodRoundedIcon from "@mui/icons-material/SystemSecurityUpdateGoodRounded";
 import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
 import TuneRoundedIcon from "@mui/icons-material/TuneRounded";
-import Avatar from '@mui/material/Avatar';
-import { AvatarGroup } from '@mui/material';
-import { Badge } from '@mui/base';
-import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+import Avatar from "@mui/material/Avatar";
+import { AvatarGroup } from "@mui/material";
+import { Badge } from "@mui/base";
+import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { darkModeContext } from "../../Context/darkModeContext";
+
 const Sidebar = () => {
+  const { dispatch } = useContext(darkModeContext);
+
   return (
     <div className='sidebar'>
       <div className='top'>
-        <span className='logo'>Raj_Admin</span>
+        <Link
+          to='/'
+          style={{ color: "inherit", textDecoration: "none" }}>
+          <span className='logo'>
+            Raj{" "}
+            <span
+              style={{ color: "#032e47" }}
+              className='inner'>
+              Admin
+            </span>
+          </span>
+        </Link>
       </div>
-      <hr />
+      <hr className='line' />
       <div className='center'>
         <ul>
-            <p>MAIN</p>
+          <p>MAIN</p>
           <li>
-            <SpaceDashboardRoundedIcon className="icon" />
+            <SpaceDashboardRoundedIcon className='icon' />
             <span>DashBoard</span>
           </li>
           <p>LISTS</p>
+          <Link
+            to='/users'
+            style={{ color: "inherit", textDecoration: "none" }}>
+            <li>
+              <Person3RoundedIcon className='icon' />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link
+            to='/products'
+            style={{ color: "inherit", textDecoration: "none" }}>
+            <li>
+              <StorefrontRoundedIcon className='icon' />
+              <span>Products</span>
+            </li>
+          </Link>
           <li>
-            <Person3RoundedIcon className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <StorefrontRoundedIcon className="icon" />
-            <span>Products</span>
-          </li>
-          <li>
-            <DescriptionRoundedIcon className="icon" />
+            <DescriptionRoundedIcon className='icon' />
             <span>Orders</span>
           </li>
           <li>
-            <DeliveryDiningRoundedIcon className="icon" />
+            <DeliveryDiningRoundedIcon className='icon' />
             <span>Delivery</span>
           </li>
           <p>USEFUL</p>
           <li>
-            <BarChartRoundedIcon className="icon" />
+            <BarChartRoundedIcon className='icon' />
             <span>Status</span>
           </li>
           <li>
-            <NotificationsActiveRoundedIcon className="icon" />
+            <NotificationsActiveRoundedIcon className='icon' />
             <span>Notifications</span>
           </li>
           <p>SERVICE</p>
           <li>
-            <SystemSecurityUpdateGoodRoundedIcon className="icon" />
+            <SystemSecurityUpdateGoodRoundedIcon className='icon' />
             <span>Helth of system</span>
           </li>
           <li>
-            <PsychologyRoundedIcon className="icon" />
+            <PsychologyRoundedIcon className='icon' />
             <span>Logs</span>
           </li>
           <li>
-            <TuneRoundedIcon className="icon" />
+            <TuneRoundedIcon className='icon' />
             <span>Settings</span>
           </li>
           <p>PERSONAL</p>
           <li>
-            <div className="avater" style={{display:'flex', alignItems:'center'}}>
-
-          <Avatar sx={{ bgcolor:'red' }} className="avatar">R</Avatar>
-            <span>Profile</span>
+            <div
+              className='avater'
+              style={{ display: "flex", alignItems: "center" }}>
+              <Avatar
+                sx={{ bgcolor: "red" }}
+                className='avatar'>
+                R
+              </Avatar>
+              <span>Profile</span>
             </div>
           </li>
           <li>
-            <LogoutRoundedIcon className="icon"/>
+            <LogoutRoundedIcon className='icon' />
             <span>Logout</span>
           </li>
         </ul>
       </div>
-        <p className="theme"> THEHES</p>
+      <p className='theme'> THEHES</p>
       <div className='bottom'>
-        <div className="colorOptions"></div>
-        <div className="colorOptions"></div>
-        <div className="colorOptions"></div>
+        <div className='colorOptions' onClick={()=> dispatch({type:"LIGHT_MODE"})}></div>
+        <div className='colorOptions' onClick={()=> dispatch({type:"DARK_MODE"})}></div>
+        {/* <div className='colorOptions'></div> */}
       </div>
     </div>
   );

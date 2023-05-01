@@ -1,7 +1,44 @@
 .DataTable {
+  .dataTableTitle {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      color: gray;
+    }
+
+    .link {
+      text-decoration: none;
+      color: rgb(2, 129, 91);
+      border: 1px solid rgb(2, 129, 91);
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        color: #ffffff;
+        background-color: #016422af;
+        margin-left: 5px;
+        border-radius: 50%;
+      }
+
+      &:hover {
+        background-color: #05916e8a;
+        color: #ffffff;
+        border-color: #ffffff8a;
+        transition: all 0.6s ease;
+      }
+    }
+  }
   height: 600px;
   padding: 20px;
-
 
   .cellWithImg {
     display: flex;
@@ -51,6 +88,7 @@
       border: 0.5px solid lightgray;
       border-color: #7f8c96;
       cursor: pointer;
+      color: #0c7cd5;
 
       &:hover {
         background-color: #0c7cd5;
@@ -65,6 +103,7 @@
       border: 0.5px solid lightgray;
       border-color: #7f8c96;
       cursor: pointer;
+      color: red;
 
       &:hover {
         background-color: rgba(238, 24, 24, 0.945);

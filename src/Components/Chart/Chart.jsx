@@ -48,8 +48,8 @@ const Chart = ({aspect, title}) => {
               />
             </linearGradient>
           </defs>
-          <XAxis dataKey='name' stroke="grey"/>
-          <YAxis stroke="grey"/>
+          <XAxis dataKey='name' stroke="#4e4e4e"/>
+          <YAxis stroke="#4e4e4e"/>
           <CartesianGrid strokeDasharray='3 3' className="chartGrid"/>
           <Tooltip />
           <Area
